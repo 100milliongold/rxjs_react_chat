@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from  'react-router-dom';
+import { BrowserRouter, Route, Routes } from  'react-router-dom';
 import { FirstPerson, SecondPerson, PersonSwitcher } from './components';
 
 function App() {
@@ -7,11 +7,11 @@ function App() {
     <BrowserRouter>
       <>
         <PersonSwitcher />
-        <Switch>
-          <Route path="/" component={FirstPerson} exact />
-          <Route path="/first-person" component={FirstPerson} exact />
-          <Route path="/second-person" component={SecondPerson} exact />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<FirstPerson />} />
+          <Route path="/first-person" element={<FirstPerson />} />
+          <Route path="/second-person" element={<SecondPerson />} />
+        </Routes>
       </>
     </BrowserRouter>
   );

@@ -43,7 +43,7 @@ const FirstPerson = () => {
                     placeholder="type here..."
                     required
                     value={input}
-                    onChange={useCallback(e => setInput(e.target.value),[])}
+                    onChange={useCallback((e : React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value),[])}
                 />
                 <button type="submit">Send</button> <br />
             </Form>
